@@ -4,7 +4,7 @@ return {
   config = function()
     require("catppuccin").setup({
       auto_integrations = true,
-      transparent_background = true,
+      -- transparent_background = true,
       integrations = {
         neotree = true,
         treesitter_context = true,

@@ -1,6 +1,5 @@
 require("config.whichkey-groups")
 
-
 -------------------------------------------------------------------------------------------------
 -- Normal Mode Mappings --
 
@@ -106,7 +105,7 @@ vim.keymap.set({ "t", "n" }, "<F4>", function() _TOGGLE_FLOATING_TERM("F4") end,
 vim.keymap.set({ "t", "n" }, "<F5>", function() _TOGGLE_FLOATING_TERM("F5") end, { silent = true, noremap = true })
 vim.keymap.set({ "t", "n" }, "<F6>", function() _TOGGLE_FLOATING_TERM("F6") end, { silent = true, noremap = true })
 -- Toggle LazyGit and "bun run dev" with F key
-vim.keymap.set({ "t", "n" }, "<F7>", function() _LAZYGIT_TOGGLE() end)
+vim.keymap.set({ "t", "n" }, "<F9>", function() _LAZYGIT_TOGGLE() end)
 vim.keymap.set({ "t", "n" }, "<F8>", function() _BUN_TOGGLE() end)
 -- Toggle Horizontal and Vertical terms (They share terminals)
 vim.keymap.set({ "t", "n" }, "<S-F1>", function() _TOGGLE_VERTICAL_TERM("F1") end)
