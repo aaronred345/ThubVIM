@@ -20,7 +20,8 @@ return {
         window = {
           mappings = {
             ["l"] = "open",
-            ["h"] = "open",
+            ["h"] = "close_node",
+            ["<A-l>"] = "focus_preview"
           }
         }
       })
