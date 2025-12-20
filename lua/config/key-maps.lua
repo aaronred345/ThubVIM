@@ -5,13 +5,20 @@ local mapKeys = vim.keymap.set
 -------------------------------------------------------------------------------------------------
 -- Normal Mode Mappings --
 
+-- Goto defition, no idea what made it so I have to manually map it :/
 mapKeys("n", "gd", function(buf) vim.lsp.buf.definition() end)
+
+-- Tmux Sessionizer
+mapKeys("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Close Vim, Buffers, Splits, etc
 mapKeys("n", "<leader>q", ":qa<CR>", { desc = "Close NeoVim" })
 mapKeys("n", "<leader>Q", ":qa!<CR>", { desc = "Force CLose NeoVim" })
 mapKeys("n", "<A-q>", ":qa<CR>", { silent = true })
 mapKeys("n", "<A-Q>", ":qa!<CR>", { silent = true })
+
+-- Select all
+mapKeys("n", "<C-a>", "ggVG", { silent = true })
 
 -- Save
 mapKeys("n", "<leader>s", ":w<CR>", { silent = true, desc = "Save buffer" })
@@ -66,12 +73,6 @@ mapKeys("n", "<leader>Sd", ":SessionManager load_current_dir_session<CR>", {
   "Load current directory session"
 })
 mapKeys("n", "<leader>Ss", ":SessionManager load_session<CR>", { silent = true, desc = "Select session" })
-
--- Project Manager
-mapKeys("n", "<C-p>", function()
-  require("session_manager").save_current_session()
-  require("telescope").extensions.project.project()
-end, { silent = true })
 
 -- Smart Splits
 mapKeys("n", "<leader>x", ":close<CR>", { silent = true, desc = "Close Split" })
@@ -154,6 +155,9 @@ mapKeys("n", "<leader>t>", ":BufferNext<CR>", { desc = "Next Buffer", silent = t
 
 -- Save
 mapKeys("i", "<A-s>", "<Esc>:w<CR>")
+
+-- Select All
+mapKeys("i", "<C-a>", "<Esc>ggVG")
 
 -- Navigation
 mapKeys("i", "<A-h>", "<Esc>i")

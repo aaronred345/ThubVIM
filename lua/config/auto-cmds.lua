@@ -9,13 +9,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
   command = "silent! loadview"
 })
 
--- Session Manager and Splash Screen
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    require("telescope").load_extension("project")
-  end
-})
-
 -- Enable Treesitter features for all supported languages
 vim.api.nvim_create_autocmd('FileType', {
   pattern = {
