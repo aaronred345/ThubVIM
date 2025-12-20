@@ -52,6 +52,13 @@ M.options = {
     action = "Lazy"
   },
   {
+    icon = "",
+    desc = " - Update Plugins",
+    key = "u",
+    key_format = " [%s]",
+    action = "Lazy update"
+  },
+  {
     icon = "😢",
     desc = " - Close Neovim",
     key = 'q',
