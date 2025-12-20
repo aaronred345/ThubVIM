@@ -31,27 +31,11 @@ M.header = {
 
 M.options = {
   {
-    icon = "⛏️",
-    desc = ' - Pick Project',
-    key = 'p',
-    key_format = ' [%s]',
-    action = function()
-      require("telescope").extensions.project.project()
-    end,
-  },
-  {
-    icon = "⏮️",
-    desc = " - Open Last Project",
-    key = "P",
-    key_format = " [%s]",
-    action = "SessionManager load_last_session"
-  },
-  {
-    icon = "🔎",
-    desc = " - Search Sessions",
+    icon = "📖",
+    desc = " - Open Project",
     key = "s",
     key_format = " [%s]",
-    action = "SessionManager load_session"
+    action = "SessionManager load_current_dir_session"
   },
   {
     icon = "📂",
