@@ -33,7 +33,7 @@ M.options = {
   {
     icon = "📖",
     desc = " - Open Project",
-    key = "s",
+    key = "o",
     key_format = " [%s]",
     action = "SessionManager load_current_dir_session"
   },
@@ -52,7 +52,7 @@ M.options = {
     action = "Lazy"
   },
   {
-    icon = "",
+    icon = "󰚰 ",
     desc = " - Update Plugins",
     key = "u",
     key_format = " [%s]",
